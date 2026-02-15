@@ -71,6 +71,7 @@ export type Database = {
           booked_by: string | null
           created_at: string
           expires_at: string | null
+          has_electric_port: boolean
           id: string
           seat_number: number
           status: string
@@ -80,6 +81,7 @@ export type Database = {
           booked_by?: string | null
           created_at?: string
           expires_at?: string | null
+          has_electric_port?: boolean
           id?: string
           seat_number: number
           status?: string
@@ -89,6 +91,7 @@ export type Database = {
           booked_by?: string | null
           created_at?: string
           expires_at?: string | null
+          has_electric_port?: boolean
           id?: string
           seat_number?: number
           status?: string
