@@ -79,8 +79,6 @@ Live URL:
 
 AI-based crowd prediction
 
-Noise level monitoring integration
-
 Firebase real-time database integration
 
 Mobile application support
