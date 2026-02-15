@@ -56,9 +56,10 @@ export default function Index() {
               <CardHeader>
                 <CardTitle>Seat Map</CardTitle>
                 <div className="flex gap-4 text-xs">
-                  <span className="flex items-center gap-1"><span className="h-3 w-3 rounded-sm bg-green-500" /> Free</span>
-                  <span className="flex items-center gap-1"><span className="h-3 w-3 rounded-sm bg-destructive" /> Booked</span>
-                  <span className="flex items-center gap-1"><span className="h-3 w-3 rounded-sm bg-blue-500" /> Your Seat</span>
+              <span className="flex items-center gap-1"><span className="h-3 w-3 rounded-sm bg-green-500" /> Free</span>
+              <span className="flex items-center gap-1"><span className="h-3 w-3 rounded-sm bg-destructive" /> Booked</span>
+              <span className="flex items-center gap-1"><span className="h-3 w-3 rounded-sm bg-blue-500" /> Your Seat</span>
+              <span className="flex items-center gap-1">⚡ Electric Port</span>
                 </div>
               </CardHeader>
               <CardContent>

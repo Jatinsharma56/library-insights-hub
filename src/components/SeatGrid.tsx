@@ -3,6 +3,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { Zap } from "lucide-react";
 import type { Tables } from "@/integrations/supabase/types";
 
 type Seat = Tables<"seats">;
@@ -70,15 +71,19 @@ export default function SeatGrid({ seats, onRefresh }: SeatGridProps) {
               onClick={() => handleSeatClick(seat)}
               disabled={seat.status === "booked" && seat.booked_by !== user?.id}
               className={cn(
-                "aspect-square rounded-md flex items-center justify-center text-xs font-bold transition-colors",
+                "aspect-square rounded-md flex flex-col items-center justify-center text-xs font-bold transition-colors relative",
                 getSeatColor(seat)
               )}
             >
               {seat.seat_number}
+              {seat.has_electric_port && (
+                <Zap className="h-3 w-3 absolute top-0.5 right-0.5 text-yellow-300 drop-shadow" />
+              )}
             </button>
           </TooltipTrigger>
           <TooltipContent>
-            <p>Seat #{seat.seat_number} — {getSeatLabel(seat)}</p>
+            <p>Seat #{seat.seat_number} — {getSeatLabel(seat)}{seat.has_electric_port ? " ⚡" : ""}</p>
+            {seat.has_electric_port && <p className="text-xs text-muted-foreground">Electric port available</p>}
             {seat.status === "booked" && seat.expires_at && (
               <p className="text-xs text-muted-foreground">
                 Expires: {new Date(seat.expires_at).toLocaleTimeString()}
