@@ -7,6 +7,7 @@ import SeatGrid from "@/components/SeatGrid";
 import StatsPanel from "@/components/StatsPanel";
 import NoiseMonitor from "@/components/NoiseMonitor";
 import BestTimeCard from "@/components/BestTimeCard";
+import LibraryStatusCard from "@/components/LibraryStatusCard";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { Tables } from "@/integrations/supabase/types";
 
@@ -68,6 +69,7 @@ export default function Index() {
             </Card>
           </div>
           <div className="space-y-4">
+            <LibraryStatusCard />
             <NoiseMonitor />
             <BestTimeCard />
           </div>
