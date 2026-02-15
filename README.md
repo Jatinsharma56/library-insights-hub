@@ -1,73 +1,91 @@
-# Welcome to your Lovable project
+📚 Library Insights Hub
 
-## Project info
+🚀 Live Demo: https://library-insights-hub.vercel.app/
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+Library Insights Hub is an AI-powered smart dashboard that provides real-time insights into library seat availability, crowd levels, and overall occupancy conditions.
 
-## How can I edit this code?
+This system helps students check seat availability remotely without physically visiting the library, saving time and improving convenience.
 
-There are several ways of editing your application.
+🎯 Project Objective
 
-**Use Lovable**
+The main objective of this project is to:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Monitor library seat availability in real time
 
-Changes made via Lovable will be committed automatically to this repo.
+Display free and booked seats clearly
 
-**Use your preferred IDE**
+Show library crowd level statistics
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Provide a clean and user-friendly dashboard
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Improve smart campus management
 
-Follow these steps:
+✨ Key Features
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+📊 Real-Time Seat Availability Tracking
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+🟢 Available Seats Indicator
 
-# Step 3: Install the necessary dependencies.
-npm i
+🔴 Occupied Seats Indicator
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+📈 Crowd Density Monitoring
+
+📱 Responsive Dashboard UI
+
+⚡ Fast and Optimized Performance
+
+🛠️ Technologies Used
+
+This project is built using:
+
+⚛ React
+
+⚡ Vite
+
+🟦 TypeScript
+
+🎨 Tailwind CSS
+
+🧩 shadcn-ui
+
+🌐 Vercel (Deployment)
+
+💻 How to Run the Project Locally
+1️⃣ Clone the Repository
+git clone https://github.com/YOUR_USERNAME/library-insights-hub.git
+
+2️⃣ Navigate to Project Folder
+cd library-insights-hub
+
+3️⃣ Install Dependencies
+npm install
+
+4️⃣ Start Development Server
 npm run dev
-```
 
-**Edit a file directly in GitHub**
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The project will run on:
 
-**Use GitHub Codespaces**
+http://localhost:5173
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+🌍 Deployment
 
-## What technologies are used for this project?
+This project is deployed using Vercel.
 
-This project is built with:
+Live URL:
+👉 https://library-insights-hub.vercel.app/
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+🔮 Future Enhancements
 
-## How can I deploy this project?
+AI-based crowd prediction
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+Noise level monitoring integration
 
-## Can I connect a custom domain to my Lovable project?
+Firebase real-time database integration
 
-Yes, you can!
+Mobile application support
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+👨‍💻 Developed By
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Jatin Sharma
+Chitkara University
