@@ -1,17 +1,42 @@
 import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
-import { BookOpen, LogOut } from "lucide-react";
+import { BookOpen, LogOut, BarChart3, LayoutDashboard } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { NavLink } from "@/components/NavLink";
+import { cn } from "@/lib/utils";
 
 export default function Navbar() {
   const { user, role, signOut } = useAuth();
 
+  const linkClass = "text-sm font-medium transition-colors hover:text-primary";
+
   return (
     <header className="border-b bg-card">
       <div className="container mx-auto flex h-14 items-center justify-between px-4">
-        <div className="flex items-center gap-2">
-          <BookOpen className="h-5 w-5 text-primary" />
-          <span className="font-bold text-lg">Smart Library</span>
+        <div className="flex items-center gap-6">
+          <div className="flex items-center gap-2">
+            <BookOpen className="h-5 w-5 text-primary" />
+            <span className="font-bold text-lg">Smart Library</span>
+          </div>
+          {user && (
+            <nav className="flex items-center gap-4">
+              <NavLink
+                to="/"
+                className={cn(linkClass, "text-muted-foreground")}
+                activeClassName="text-primary"
+                end
+              >
+                <span className="flex items-center gap-1"><LayoutDashboard className="h-3.5 w-3.5" /> Dashboard</span>
+              </NavLink>
+              <NavLink
+                to="/analytics"
+                className={cn(linkClass, "text-muted-foreground")}
+                activeClassName="text-primary"
+              >
+                <span className="flex items-center gap-1"><BarChart3 className="h-3.5 w-3.5" /> Analytics</span>
+              </NavLink>
+            </nav>
+          )}
         </div>
         {user && (
           <div className="flex items-center gap-3">

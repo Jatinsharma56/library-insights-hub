@@ -5,6 +5,8 @@ import { supabase } from "@/integrations/supabase/client";
 import Navbar from "@/components/Navbar";
 import SeatGrid from "@/components/SeatGrid";
 import StatsPanel from "@/components/StatsPanel";
+import NoiseMonitor from "@/components/NoiseMonitor";
+import BestTimeCard from "@/components/BestTimeCard";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import type { Tables } from "@/integrations/supabase/types";
 
@@ -48,19 +50,27 @@ export default function Index() {
 
         <StatsPanel seats={seats} />
 
-        <Card>
-          <CardHeader>
-            <CardTitle>Seat Map</CardTitle>
-            <div className="flex gap-4 text-xs">
-              <span className="flex items-center gap-1"><span className="h-3 w-3 rounded-sm bg-green-500" /> Free</span>
-              <span className="flex items-center gap-1"><span className="h-3 w-3 rounded-sm bg-destructive" /> Booked</span>
-              <span className="flex items-center gap-1"><span className="h-3 w-3 rounded-sm bg-blue-500" /> Your Seat</span>
-            </div>
-          </CardHeader>
-          <CardContent>
-            <SeatGrid seats={seats} onRefresh={fetchSeats} />
-          </CardContent>
-        </Card>
+        <div className="grid gap-4 md:grid-cols-3">
+          <div className="md:col-span-2">
+            <Card>
+              <CardHeader>
+                <CardTitle>Seat Map</CardTitle>
+                <div className="flex gap-4 text-xs">
+                  <span className="flex items-center gap-1"><span className="h-3 w-3 rounded-sm bg-green-500" /> Free</span>
+                  <span className="flex items-center gap-1"><span className="h-3 w-3 rounded-sm bg-destructive" /> Booked</span>
+                  <span className="flex items-center gap-1"><span className="h-3 w-3 rounded-sm bg-blue-500" /> Your Seat</span>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <SeatGrid seats={seats} onRefresh={fetchSeats} />
+              </CardContent>
+            </Card>
+          </div>
+          <div className="space-y-4">
+            <NoiseMonitor />
+            <BestTimeCard />
+          </div>
+        </div>
       </main>
     </div>
   );
